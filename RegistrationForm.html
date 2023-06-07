@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        form{
+            border-color: black;
+            width: 500px;
+            background-color: orange;
+            display:flexbox;
+        }
+        body{
+            padding-left: 400px;
+        }
+        div{
+            padding-left: 100px;
+            display: block;
+        }
+        .btn{
+          padding: 10px;
+          padding-left: 100px;
+          padding-right: 100px;
+          background-color: darkslategray;
+        }
+        b{
+            color:white;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" onsubmit="onFormSubmit(event)">
+        <label><center><b>Book A Call</b></center></label>
+        <label><center>Book a call slot and  our representative will call you within 1hr of selected time</center></label>
+        <hr>
+        <div>
+            <label>Name</label><br>
+            <input type="Text" name="username"/>
+        </div>
+        <div>
+            <label>Email</label><br>
+            <input type="Text" name="email" id="email"/>
+        </div>
+        <div>
+            <label>Phone</label><br>
+            <input type="tel" name="phone" id="phone"/>
+        </div>
+        <div>
+            <label>Time for Call</label><br>
+            <input type="date" name="date" id="date"/>
+            <input type="time" name="time" id="time"/>
+        </div>
+        <div>
+            <br>
+            <br>
+            <input type="submit" value="Get A call" style="color:white;" class="btn" name="btnSubmit" id="btnSubmit">
+            <br>
+            <br>
+        </div>
+
+    </form>
+    <script>
+        function onFormSubmit(event){
+            event.preventDefault();
+            console.log(event.target.username.value);
+            console.log(event.target.email.value);
+            console.log(event.target.phone.value);
+            console.log(event.target.date.value);
+            console.log(event.target.time.value);
+        }
+    </script>
+</body>
+</html>
